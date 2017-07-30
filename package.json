@@ -1,0 +1,43 @@
+{
+  "name": "my-jest-starter",
+  "version": "1.0.0",
+  "description": "TypeScript project with Jest",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ts-node -- ./src/index.ts",
+    "build": "tsc -p .",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "jest",
+    "typescript"
+  ],
+  "author": "Michael Trang <michael.trang@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^20.0.5",
+    "@types/node": "^8.0.17",
+    "jest": "^20.0.4",
+    "nodemon": "^1.11.0",
+    "ts-jest": "^20.0.7",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.4.2"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  }
+}
